@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <hr id="line">
+    <h2></h2>
+    <form>
+        <input type="text" id="MR" placeholder="Mesto rojdenia">
+        <input type="button" value="Add" id="MRbutton">
+        <input type="text" id="DOLJNOST" placeholder="Doljnost">
+        <input type="button" value="Add" id="DoljnostButton">
+        <input type="text" placeholder="Pol" id="POL">
+        <input type="button" value="Add" id="POLButton">
+    </form>
+    <form>
+        <select name="Курс" id="Kypc">
+            <option>Первый.</option>
+            <option>Второй.</option>
+            <option>Третий.</option>
+        </select>
+        <select name="Язык" id="Lang">
+            <option>Русский.</option>
+            <option>Английский.</option>
+        </select>
+        <select name="Продолжительность" id="Length">
+            <option>1 год.</option>
+            <option>2 года.</option>
+            <option>3 года.</option>
+        </select>
+        <input type="radio" name="LOP" id="LOP" value="JavaScript">JavaScript
+        <input type="radio" name="LOP" id="LOP" value="Python">Python
+        <input type="radio" name="LOP" id="LOP" value="C++">C++
+        <input type="button" value="Send" id="SendButton">
+    </form>
+    <script>
+        var a=document.getElementById('line')
+        a.style.width='57%';
+        a.style.height='2px';
+
+        var MR=document.getElementById('MRbutton')
+        var DOLJNOST=document.getElementById('DoljnostButton')
+        var POL=document.getElementById('POLButton')
+        MR.onclick=AddMR
+        DOLJNOST.onclick=ADDDoljnost
+        POL.onclick=ADDPol
+        function AddMR(){
+            var textInput=document.getElementById('MR')
+            var mr=textInput.value
+            alert('Место рождения '+mr)
+        }
+        function ADDDoljnost(){
+            var textInput=document.getElementById('DOLJNOST')
+            var mr=textInput.value
+            alert('Должность '+mr)
+        }
+        function ADDPol(){
+            var textInput=document.getElementById('POL')
+            var mr=textInput.value
+            alert('Пол '+mr)
+        }
+
+        var Send=document.getElementById('SendButton')
+        Send.onclick=SendAncet
+        function SendAncet(){
+            var Kurc=document.getElementById('Kypc')
+            var kurc=Kurc.value
+            var Language=document.getElementById('Lang')
+            var language=Language.value
+            var Length=document.getElementById('Length')
+            var length=Length.value
+            var LOP=document.getElementById('LOP')
+            var lop=LOP.value
+            alert("Курс: "+kurc+" Язык общения: "+language+" Продолжительность обучения: "+length+" Язык программирования: "+lop)
+            var kurcPrice=0
+            var langPrice=0
+            var lenPrice=0
+            var prPrice=0
+            var result=0
+            if(kurc=='Первый.') kurcPrice=500
+            else if(kurc=='Второй.') kurcPrice=450
+            else kurcPrice=400
+            if(language=='Русский.') langPrice=50
+            else langPrice=100
+            if(lenPrice=='1 год.')lenPrice=100
+            else if(lenPrice=='2 года.')lenPrice==150
+            else lenPrice=200
+            if(lop=='JavaScript')prPrice=300
+            else if(lop=='C++')prPrice=250
+            else prPrice=200
+            result=kurcPrice+langPrice+lenPrice+prPrice
+            alert("Конечная стоимость курса: "+result)
+        }
+    </script>
+</body>
+</html>

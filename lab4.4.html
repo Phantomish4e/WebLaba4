@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x=[1.2,2.3,3.4,4.5,5.6,6.7,7.8,8.9,9.0,10.1,11.2,12.3,13.4,14.5]
+        x.sort(function ctg(a,b){
+            return b-a;
+        })
+        alert(x)
+
+        var today=new Date()
+        var day=today.getDate()
+        var hour=today.getHours()
+        var second=today.getSeconds()
+        alert(day+" "+hour+" "+second)
+        const unixTimeZero = Date.parse(today);
+        alert(unixTimeZero)
+        const time=today.getTime();
+        alert(time)
+        const dr=new Date("10 May 2003")
+        var dd=dr.getDay()
+        if(dd==1)alert(dd+" Понедельник")
+        else if(dd==2)alert(dd+" Вторник")
+        else if(dd==3)alert(dd+" Среда")
+        else if(dd==4)alert(dd+" Четверг")
+        else if(dd==5)alert(dd+" Пятница")
+        else if(dd==6)alert(dd+" Суббота")
+        else alert(dd+" Воскресенье")
+
+        var c=1,d=4,e=6
+        if(c>d&c>e)alert("Максимальный элемент "+c)
+        else if(d>c&d>e)alert("Максимальный элемент "+d)
+        else if(e>c&e>d)alert("Максимальный элемент "+e)
+        else if(e==c||e==d)alert("Максимальный элемент "+e)
+        else if(d==e||d==c)alert("Максимальный элемент "+d)
+        else alert("Максимальный элемент "+c)
+    </script>
+</body>
+</html>

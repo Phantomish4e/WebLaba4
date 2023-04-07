@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        var R=[7,5,8]
+        R.unshift(1)
+        R.unshift(2)
+        R.push("a")
+        R.push("b")
+        R.push("c")
+        alert(R)
+
+        var arr=[]
+        for(var i=0; i < 4; i++){
+            arr.push(Math.floor(Math.random()*10))
+            arr[i]=[]
+            for(var y=0; y < 6; y++){
+                arr[i].push(Math.floor(Math.random()*10))
+            }
+            if(i%2==0)arr[i].sort(function (a,b){ return a-b})
+        }
+        alert(arr)
+        
+        var arr2=[
+            [1,'fasd','asr',62,'qwz','vbcn','jxcvhg',15],
+            [2,9,31,'yd7a','vcbx87',612,'cvbnkl','9ijn'],
+            [3,013,5743,534786,'cnvbs','iuyzxi','23zaft',987],
+            ['xcvbkhjb','sdfghjk',4,'jxckvhs',32,509,'fasdhgjf',51],
+            ['','zxcvkj',75,'afjskgdh',18,15,'sdfgsd',5]
+        ]
+        alert("Default "+arr2)
+        arr2.reverse()
+        arr2.join(',')
+        alert("New "+arr2)
+
+        var text=[
+            ['as','sd','df','fg','gh','hj','jk'],
+            ['qw','we','er','rt','ty','yu','ui'],
+            ['zx','xc','cv','vb','bn','nm','m'],
+            ['qa','ws','ed','rf','tg','yh','uj'],
+            ['za','xs','cd','vf','bg','nh','mj']
+        ]
+        text.unshift(['zq','xw','ce','vr','bt','ny','mu'])
+        text.unshift(['zq','xw','ce','vr','bt','ny','mu'])
+        text.unshift(['zq','xw','ce','vr','bt','ny','mu'])
+        text.unshift(['zq','xw','ce','vr','bt','ny','mu'])
+        text.pop()
+        text.pop()
+        text.pop()
+        alert(text)
+    </script>
+</body>
+</html>

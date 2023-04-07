@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            display: flex;
+            flex-direction: column;
+        }
+        img{
+            width: 505px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="resize" id="id">
+    <input type="button" value="100%" id="100">
+    <div>
+        <a class="div">
+            <img src="./contact-cover1.png" alt="contact-cover1" id="img">
+            <img src="./contact-cover1.png" alt="contact-cover1" id="img1">
+            <img src="./contact-cover1.png" alt="contact-cover1" id="img2">
+            <img src="./contact-cover1.png" alt="contact-cover1" id="img3">
+        </a>
+    </div>
+    <script>
+        var a=document.getElementById('id')
+        a.onclick=resize
+        function resize(){
+            var img=document.getElementById('img')
+            var img1=document.getElementById('img1')
+            var img2=document.getElementById('img2')
+            var img3=document.getElementById('img3')
+            img.style.width='60%'
+            img.style.height='60%'
+            img1.style.width='60%'
+            img1.style.height='60%'
+            img2.style.width='60%'
+            img2.style.height='60%'
+            img3.style.width='60%'
+            img3.style.height='60%'
+        }
+        var b=document.getElementById('100')
+        b.onclick=back
+        function back(){
+            var img=document.getElementById('img')
+            var img1=document.getElementById('img1')
+            var img2=document.getElementById('img2')
+            var img3=document.getElementById('img3')
+            img.style.width='70%'
+            img.style.height='70%'
+            img1.style.width='70%'
+            img1.style.height='70%'
+            img2.style.width='70%'
+            img2.style.height='70%'
+            img3.style.width='70%'
+            img3.style.height='70%'
+        }
+    </script>
+</body>
+</html>

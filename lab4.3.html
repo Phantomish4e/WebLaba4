@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var lang="анг"
+        var msw=["Monday","Tuesday","Wednesday","Thursday","Friday","Sunday","Saturday"]
+        if(lang=="анг")alert(msw)
+        else if(lang=="рус")alert("Понедельник")
+        else if(lang=="бел")alert("Панядзелак")
+        else alert("Ошибка")
+
+        var str="ab12cde345"
+        var k=8
+        const isLetter = /[a-zA-Z]/.test(str.charAt(k));
+        alert(isLetter)
+        var sum=0;
+        for(var i=0;i<str.length;i++){
+            const islet=/[a-zA-Z]/.test(str.charAt(i))
+            if(islet==false) {sum+=Number(str[i]); alert(sum+islet) }
+            else alert(islet)
+        }
+        alert("Сумма "+sum)
+        if(sum%2==0)alert("четное")
+        else alert("нечетное")
+        alert(str.charAt(k))
+
+        var date="31.12.2023"
+        var VG
+        var Month
+        Month=date.split('.')
+        if(Month[1]=="12") alert("Зима")
+        else if(Month[1]=="01") alert("Зима")
+        else if(Month[1]=="02") alert("Зима")
+        else if(Month[1]=="03") alert("Весна")
+        else if(Month[1]=="04") alert("Весна")
+        else if(Month[1]=="05") alert("Весна")
+        else if(Month[1]=="06") alert("Лето")
+        else if(Month[1]=="07") alert("Лето")
+        else if(Month[1]=="08") alert("Лето")
+        else if(Month[1]=="09") alert("Осень")
+        else if(Month[1]=="10") alert("Осень")
+        else if(Month[1]=="11") alert("Осень")
+        else alert("Нет такого месяца")
+        if(Month[0]>0&Month[0]<=10) alert("Первая декада")
+        else if(Month[0]>10&Month[0]<=20) alert("Вторая декада")
+        else if(Month[0]>20&Month[0]<=31) alert("Третья декада")
+        else alert("Нет такого дня")
+
+        var a=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
+        var scc=0
+        var pan=0
+        for(var i = 0;i<a.length;i++){
+            if(a[i]%2==0) scc+=a[i]
+        }
+        for(var i = 0; i < a.length; i++){
+            if(i%3==0) pan+=i
+        }
+        alert(scc)
+        alert(pan)
+    </script>
+</body>
+</html>

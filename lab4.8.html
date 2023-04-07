@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div2{
+            position: relative;
+            text-align: center;
+        }
+        #div3{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -950%);
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <h1 id="text">Привет, как дела?)</h1>
+    </div>
+    <div id="div2">
+        <img src="./contact-cover1.png" alt="contact-cover1" id="img1" name="myImage1" >
+    </div>
+    <div id="div3">contact-cover1</div>
+    <script>
+        var a=document.getElementById('text')
+        a.onmouseover=resizeStr
+        function resizeStr(){
+            var text=document.getElementById('text')
+            text.style.fontSize='42pt'
+            text.style.color='green'
+            text.style.background='white'
+        }
+        a.onmouseout=backStr
+        function backStr(){
+            var text=document.getElementById('text')
+            text.style.fontSize='2em'
+            text.style.color='black'
+        }
+
+        var b=document.getElementById('div2')
+        b.onclick=changeImg
+        function changeImg(){
+            var fontstyle=document.getElementById('div3')
+            fontstyle.style.color='green'
+            var background=document.getElementById('img1')
+            document.myImage1.src="./contact-cover2.png"
+        }
+        b.ondblclick=backImg
+        function backImg(){
+            var fontstyle=document.getElementById('div3')
+            fontstyle.style.color='black'
+            var background=document.getElementById('img1')
+            document.myImage1.src="./contact-cover1.png"
+        }
+        var d=document.getElementById('div3')
+        d.onclick=changeColor
+        function changeColor(){
+            var cc=document.getElementById('div3')
+            cc.style.color='blue'
+        }
+        d.ondblclick=backColor
+        function backColor(){
+            var bc=document.getElementById('div3')
+            bc.style.color='black'
+        }
+    </script>
+</body>
+</html>
